@@ -1,0 +1,26 @@
+{
+  "name": "PrintViz",
+  "description": "Print at your convienence",
+  "main": "index.js",
+  "authors": [
+    "SujiNivedita <sujishines@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "print"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.3",
+    "jquery":"latest",
+    "angular-bootstrap":"^2.5.0"
+  }
+}

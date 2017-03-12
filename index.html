@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>eCommerce template By Adobe Dreamweaver CC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
+<script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  
+var app = angular.module("myApp", []);  
+app.controller("myCtrl", function($scope) {
+    $scope.articles = [
+    "1","2","3","4","5"
+    ];
+    $scope.rows=[
+    "1","2","3"
+    ];
+    console.log($scope.articles);
+    
+});
+</script>
+</head>
+
+<body>
+<div id="mainWrapper">
+  <header> 
+    <!-- This is the header content. It contains Logo and links -->
+    <div id="headerLinks"><a href="#" title="Login/Register">Login/Register</a><a href="#" title="Cart">Cart</a></div>
+    <div class="logo"> <!-- <img src="logoImage.png" alt="sample logo"> --> 
+      <!-- Company Logo text --><em><img src="images/Logo.png" href="#" width="51" height="50" alt="logo">&nbsp;</em></div>
+</header>
+  <section id="offer"> 
+    <!-- The offer section displays a banner text for promotions -->
+    <h2>Print Viz</h2>
+    <p>Your Personalised printing experience</p>
+  </section>
+  <div id="content">
+<!--
+    <section class="sidebar"> 
+       This adds a sidebar with 1 searchbox,2 menusets, each with 4 links 
+      
+    </section>
+-->
+    <section class="mainContent" ng-app="myApp" ng-controller="myCtrl">
+      <div class="productRow" ng-repeat="row in rows">
+        <article class="productInfo" ng-repeat="article in articles"><!-- Each individual product description -->
+          <div><img src="images/document.png" alt="document" width="100" height="100"></div>
+          <p class="price">$50</p>
+          <p class="productContent">Content holder </p>
+          <input type="button" name="button" value="Buy" class="buyButton">
+        </article>             
+      </div>
+    </section>
+
+  <footer> 
+    <!-- This is the footer with default 3 divs -->
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
+    </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius sem neque. Integer ornare.</p>
+    </div>
+    <div class="footerlinks">
+      <p><a href="#" title="Link">Link 1 </a></p>
+      <p><a href="#" title="Link">Link 2</a></p>
+      <p><a href="#" title="Link">Link 3</a></p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
